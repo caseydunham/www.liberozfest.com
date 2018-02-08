@@ -17,3 +17,7 @@
 .ss5 {
   background-image: url("/images/SS5.jpg") !important;
 }
+
+.full-width {
+  width: 100% !important;
+}
