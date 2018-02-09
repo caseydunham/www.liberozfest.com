@@ -1,0 +1,168 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <% include head %>
+</head>
+<body class="event-bg">
+
+  <% include header %>
+
+  <div class="event-hero ss3">
+    <div class="container">
+      <h2 class="customFadeInUp">
+        "the law of the strong: this is our law and the joy of the world." - <i>AL. II. 21</i>
+      </h2>
+    </div>
+    <div class="tickets container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p class="m-md-0">
+          August 13th - 18th
+        </p>
+        <a href="#" class="btn-get-tickets">
+          Get tickets
+        </a>
+        <p class="m-0">
+          Center Harbor, New Hampshire
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="event-location">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 class="event-title d-inline-block">Location</h1>
+        </div>
+      </div>
+      <div class="row no-gutters address-container">
+        <div class="col-md-4 address">
+          <h5>Address</h5>
+          <p class="mt-4">
+            Someplace
+          </p>
+          <p>
+            777 Center Harbor, NH.
+          </p>
+          <p class="mb-0">
+            <i class="ion-android-call"></i>
+            01-800 555-3312
+          </p>
+          <p>
+            <i class="ion-ios-email-outline"></i>
+            support@nowhere.com
+          </p>
+          <a class="social-link" href="#">
+            <i class="ion-social-twitter"></i>
+          </a>
+          <a class="social-link" href="#">
+            <i class="ion-social-facebook"></i>
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <% include footer %>
+
+  <script type="text/javascript">
+    $(function () {
+      var trigger = new ScrollTrigger({
+        toggle: {
+          visible: 'customFadeInUp'
+        },
+        offset: {
+          y: 150
+        },
+        once: true
+      });
+
+      // Google maps
+      var mapLocation = new google.maps.LatLng(43.710056,  -71.466165);
+
+      var map = new GMaps({
+        streetViewControl : false,
+        overviewMapControl: false,
+        mapTypeControl: false,
+        panControl : false,
+        scrollwheel: false,
+        center: mapLocation,
+        el: '#map',
+        zoom: 15,
+        styles: [
+        {
+          "featureType":"landscape",
+          "stylers":[
+          {"saturation":-100},
+          {"lightness":65},
+          {"visibility":"on"}
+          ]
+        },
+        {
+          "featureType":"poi",
+          "stylers":[
+          {"saturation":-100},
+          {"lightness":51},
+          {"visibility":"simplified"}
+          ]
+        },
+        {
+          "featureType":"road.highway",
+          "stylers":[
+          {"saturation":-100},
+          {"visibility":"simplified"}
+          ]
+        },
+        {
+          "featureType":"road.arterial",
+          "stylers":[
+          {"saturation":-100},
+          {"lightness":30},
+          {"visibility":"on"}
+          ]
+        },
+        {
+          "featureType":"road.local",
+          "stylers":[
+          {"saturation":-100},
+          {"lightness":40},
+          {"visibility":"on"}
+          ]
+        },
+        {
+          "featureType":"transit",
+          "stylers":[
+          {"saturation":-100},
+          {"visibility":"simplified"}
+          ]
+        },
+        {
+          "featureType":"administrative.province",
+          "stylers":[
+          {"visibility":"off"}
+          ]
+        },
+        {
+          "featureType":"water",
+          "elementType":"labels",
+          "stylers":[
+          {"visibility":"on"},
+          {"lightness":-25},
+          {"saturation":-100}
+          ]
+        }
+        ]
+      });
+
+      map.addMarker({
+        position: mapLocation,
+        icon: 'images/icons/map-icon.png'
+      });
+    })
+  </script>
+
+</body>
+</html>
