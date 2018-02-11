@@ -1,0 +1,17 @@
+web:
+  build: ./app
+  volumes:
+    - "./app:/usr/share/nginx/html"
+  ports:
+    - "3000:3000"
+  command: node ./bin/www
+
+nginx:
+  restart: always
+  build: ./nginx/
+  ports:
+    - "8080:80"
+  volumes_from:
+    - web
+  links:
+    - web:web
