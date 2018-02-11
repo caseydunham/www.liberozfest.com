@@ -1,9 +1,9 @@
 web:
   build: ./app
   volumes:
-    - "./app:/usr/share/nginx/html"
+    - /usr/share/nginx/html    
   ports:
-    - "3000:3000"
+    - "3000"
   command: node ./bin/www
 
 nginx:

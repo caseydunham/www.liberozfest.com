@@ -8,16 +8,16 @@ RUN mkdir -p /usr/share/nginx/html
 WORKDIR /usr/share/nginx/html
 
 # Copy dependency definitions
-COPY package.json /usr/share/nginx/html
+COPY package*.json ./
 
 # Install dependecies
 RUN npm install
 
-# Get all the code needed to run the app
-COPY . /usr/share/nginx/html
+# Copy the rest of the source code
+COPY . .
 
 # Expose the port the app runs in
-#EXPOSE 3000
+EXPOSE 3000
 
 # Serve the app
-#CMD ["npm", "start"]
+CMD ["npm", "start"]
