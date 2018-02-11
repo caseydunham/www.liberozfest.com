@@ -1,7 +1,7 @@
 web:
   build: ./app
   volumes:
-    - /usr/share/nginx/html    
+    - /usr/share/nginx/html
   ports:
     - "3000"
   command: node ./bin/www
@@ -10,7 +10,8 @@ nginx:
   restart: always
   build: ./nginx/
   ports:
-    - "8080:80"
+    - "80:80"
+    - "443:443"
   volumes_from:
     - web
   links:
