@@ -5,4 +5,4 @@ FROM nginx
 MAINTAINER Casey Dunham
 
 # Copy custom configuration file from the current directory
-COPY conf.d/* /etc/nginx/conf.d/
+COPY sites-available/default /etc/nginx/sites-available/default

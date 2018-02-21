@@ -2,10 +2,10 @@
 FROM node:6
 
 # Create a directory where our app will be placed
-RUN mkdir -p /usr/share/nginx/html
+RUN mkdir -p /srv/app
 
 # Change directory so that our commands run inside this new directory
-WORKDIR /usr/share/nginx/html
+WORKDIR /srv/app
 
 # Copy dependency definitions
 COPY package*.json ./
