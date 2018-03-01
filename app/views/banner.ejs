@@ -1,4 +1,16 @@
-<div class="event-hero ss1">
+<% if (title == "Home") { %>
+  <div class="event-hero ss1">
+<% } else if (title == "What is Liber Oz") { %>
+  <div class="event-hero ss2">
+<% } else if (title == "Speakers") { %>
+  <div class="event-hero ss3">
+<% } else if (title == "Location") { %>
+  <div class="event-hero ss4">
+<% } else if (title == "Schedule") { %>
+  <div class="event-hero ss5">
+<% } else if (title == "Register") { %>
+  <div class="event-hero ss3">
+<% } %>
   <div class="container">
     <h2 class="customFadeInUp">
       "the law of the strong: this is our law and the joy of the world." - <i>AL. II. 21</i>
