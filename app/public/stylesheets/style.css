@@ -30,3 +30,29 @@
 .event-speakers .col-md-4 {
   padding-left: 0px;
 }
+
+.event-schedule .event-speakers {
+  margin-top: 0px;
+}
+
+.event-speakers .title {
+  font-size: 19px;
+  color: #3746a3;
+  padding: 12px 15px 7px;
+}
+
+.event-speakers i {
+  padding-right: 10px;
+}
+
+.event-speakers .presenter-name {
+  font-size: 16px;
+  color: #3746a3;
+  padding: 12px 15px 7px;
+}
+
+.event-speakers .time {
+  font-size: 16px;
+  color: #3746a3;
+  padding: 12px 15px 7px;
+}
