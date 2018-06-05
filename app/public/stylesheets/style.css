@@ -56,3 +56,8 @@
   color: #3746a3;
   padding: 12px 15px 7px;
 }
+
+.event-intro .event-title::after {
+  width: 100%;
+  margin-left: 0;
+}
